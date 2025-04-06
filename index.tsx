@@ -137,7 +137,7 @@ export default function AutoStylWebsite() {
           <div className="absolute inset-0 bg-gradient-to-r from-cyber-black/80 to-cyber-black/40 z-10"></div>
           <div className="absolute inset-0">
             <Image
-              src="/placeholder.svg?height=1080&width=1920"
+              src="/droplets.jpg?height=1080&width=1920"
               alt="Profesjonalny detailing samochodowy"
               layout="fill"
               objectFit="cover"
@@ -243,7 +243,7 @@ export default function AutoStylWebsite() {
 
             <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src="/chevy_wash.jpg?height=600&width=800"
                 alt="Nasz zespół przy pracy"
                 layout="fill"
                 objectFit="cover"
