@@ -188,14 +188,14 @@ export default function AutoStylWebsite() {
                 15 lat doświadczenia - perfekcja w każdym detalu
               </h3>
               <p className="text-slate-600 dark:text-cyber-gray mb-4">
-                AutoStyl to profesjonalny salon detailingu samochodowego w Będzinie, który od 15 lat dba o samochody
-                naszych klientów. Specjalizujemy się w kompleksowej pielęgnacji pojazdów, oferując usługi na najwyższym
-                poziomie.
+                Autostyl to więcej niż zwykła myjnia. To miejsce, gdzie od ponad 15 lat dbamy o samochody naszych klientów,
+                dostarczając usług na najwyższym poziomie. Niezależnie od tego, czy potrzebujesz szybkiego mycia, odświeżenia lakieru,
+                pełnej korekty czy aplikacji powłoki ceramicznej, zapewniamy jakość, która robi różnicę
               </p>
               <p className="text-slate-600 dark:text-cyber-gray mb-6">
-                Nasz zespół składa się z doświadczonych specjalistów, którzy z pasją podchodzą do swojej pracy. Używamy
-                tylko najwyższej jakości produktów i najnowocześniejszych technologii, aby zapewnić Twojemu autu
-                perfekcyjny wygląd i ochronę.
+                W AutoStyl wierzymy, że każdy samochód zasługuje na wyjątkową opiekę. Bez względu na to, czy przyjeżdżasz 
+                formalnym bądź casualowym wydaniu - traktujemy każdy pojazd z najwyższą troską, dostosowując nasze usługi do
+                indywidualnych potrzeb. Dzięki temu możesz mieć pewność, że Twój samochód otrzyma dokładnie to, czego potrzebuje
               </p>
 
               <div className="grid grid-cols-2 gap-4">
@@ -270,39 +270,39 @@ export default function AutoStylWebsite() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "Detailing zewnętrzny",
+                title: "Detailing zewnętrzny - wygląd, który robi wrażenie",
                 description:
-                  "Kompleksowe czyszczenie, polerowanie i zabezpieczenie lakieru, felg oraz innych elementów zewnętrznych pojazdu.",
-                icon: "/placeholder.svg?height=80&width=80",
+                  "Profesjonalne mycie i pielęgnacja karoserii, felg oraz szyb. Używamy bezpiecznych technik i wysokiej jakości kosmetyków, dzięki którym auto zyskuje świeży wygląd, a lakier zostaje zabezpieczony.",
+                icon: "/wash.svg?height=80&width=80",
               },
               {
-                title: "Detailing wnętrza",
+                title: "Detailing wnętrza - komfort zaczyna się od środka",
                 description:
-                  "Dokładne czyszczenie tapicerki, kokpitu, dywaników oraz wszystkich elementów wewnętrznych pojazdu.",
-                icon: "/placeholder.svg?height=80&width=80",
+                  "Dokładne czyszczenie tapicerki, kokpitu, dywaników i wszystkich detali we wnętrzu auta. Usuwamy zabrudzenia, kurz i ślady codziennego użytkowania, przywracając świeżość i porządek tam, gdzie spędzasz najwięcej czasu.",
+                icon: "/interior.svg?height=80&width=80",
               },
               {
-                title: "Korekta lakieru",
+                title: "Korekta lakieru - drugie życie dla twojego lakieru",
                 description:
-                  "Usuwanie rys, hologramów i innych niedoskonałości lakieru, przywracając mu idealny wygląd.",
-                icon: "/placeholder.svg?height=80&width=80",
+                  "Usuwamy zarysowania, hologramy i inne niedoskonałości, które odbierają autu blask. Precyzyjna polerka przywraca gładkość, głębię koloru i fabryczny wygląd lakieru. To nie tylko poprawa estetyki – to inwestycja w wygląd i wartość samochodu.",
+                icon: "/ceramic_coat.svg?height=80&width=80",
               },
               {
-                title: "Powłoki ceramiczne",
+                title: "Powłoki ceramiczne - ochrona, która trwa",
                 description:
-                  "Aplikacja profesjonalnych powłok ceramicznych, zapewniających długotrwałą ochronę lakieru.",
-                icon: "/placeholder.svg?height=80&width=80",
+                  "Powłoka ceramiczna tworzy barierę chroniącą lakier przed zabrudzeniami, wodą, solą drogową i promieniowaniem UV. Dodatkowo łatwiejsze mycie i lepsza odporność na zarysowania to korzyści, które odczujesz na co dzień. ",
+                icon: "/ceramic_coat.svg?height=80&width=80",
               },
               {
-                title: "Polerowanie reflektorów",
+                title: "Polerowanie reflektorów - klarowność i bezpieczeństwo na drodze",
                 description:
-                  "Renowacja zmatowiałych i pożółkłych reflektorów, poprawiająca widoczność i wygląd pojazdu.",
-                icon: "/placeholder.svg?height=80&width=80",
+                  "Z czasem reflektory samochodowe tracą na przejrzystości, co wpływa na bezpieczeństwo jazdy. Przywracamy im pierwotną klarowność, usuwając zmatowienia, zażółcenia i zarysowania. Dzięki temu poprawiasz nie tylko estetykę swojego auta, ale także bezpieczeństwo na drodze",
+                icon: "/lamp_polish.svg?height=80&width=80",
               },
               {
-                title: "Pranie tapicerki",
+                title: "Pranie tapicerki - odświeżenie, które widać i czuć",
                 description:
-                  "Głębokie czyszczenie tapicerki materiałowej i skórzanej, usuwające plamy i nieprzyjemne zapachy.",
+                  "Kompleksowe pranie tapicerki materiałowej i skórzanej to gwarancja usunięcia brudu, plam i nieprzyjemnych zapachów. Dzięki profesjonalnym środkom czyszczącym przywracamy tapicerce świeżość, komfort i estetyczny wygląd. To jak nowy początek dla wnętrza Twojego samochodu, w którym spędzasz tak dużo czasu",
                 icon: "/placeholder.svg?height=80&width=80",
               },
             ].map((service, index) => (
@@ -377,18 +377,18 @@ export default function AutoStylWebsite() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                name: "Marek Kowalski",
-                text: "Profesjonalna obsługa i doskonałe efekty. Mój samochód wygląda jak nowy po wizycie w AutoStyl. Polecam każdemu, kto ceni sobie jakość i profesjonalizm.",
+                name: "Magda Domańska",
+                text: "Moja Hondka zyskała nowe życie! Jeszcze jej nie widziałam takiej błyszczącej, lśni jeszcze po ponad tygodniu, felgi pięknie umyte i lśniące, tapicerka jest tak wyczyszczona, że po plamach, które na niej były jeszcze za poprzedniego właściciela nie ma ani śladu. Serdecznie polecam usługi w tym miejscu :)",
                 rating: 5,
               },
               {
-                name: "Anna Nowak",
-                text: "Jestem bardzo zadowolona z usług AutoStyl. Tapicerka w moim aucie była w fatalnym stanie, a teraz wygląda jak nowa. Świetna obsługa i rozsądne ceny.",
+                name: "Szymon Pietrzak",
+                text: "W przystępnej cenie wypucowali mi auto tak dobrze, że go prawie nie poznalem. Bardzo dokładnie, wszystkie zakamarki i półeczki, fotele wyglądają jak nowe, felgi błyszczą - niesamowite. Polecam, na pewno będę korzystał regularnie",
                 rating: 5,
               },
               {
-                name: "Piotr Wiśniewski",
-                text: "Powłoka ceramiczna wykonana przez AutoStyl spełniła wszystkie moje oczekiwania. Lakier jest idealnie zabezpieczony i lśni jak nigdy wcześniej. Zdecydowanie polecam!",
+                name: "Adrian Orzechowski",
+                text: "Już drugie auto doprowadzili mi do porządku. Napewno to nie koniec korzystania z ich usług. POLECAM",
                 rating: 5,
               },
             ].map((testimonial, index) => (
@@ -449,7 +449,7 @@ export default function AutoStylWebsite() {
                     <MapPin className="h-5 w-5 text-cyber-teal dark:text-cyber-cyan mr-3 mt-0.5" />
                     <div>
                       <p className="font-medium text-slate-800 dark:text-white">Adres</p>
-                      <p className="text-slate-600 dark:text-cyber-gray">ul. Przykładowa 123, 42-500 Będzin</p>
+                      <p className="text-slate-600 dark:text-cyber-gray">ul. Piastowska 33, 42-500 Będzin</p>
                     </div>
                   </div>
 
@@ -457,9 +457,8 @@ export default function AutoStylWebsite() {
                     <Clock className="h-5 w-5 text-cyber-teal dark:text-cyber-cyan mr-3 mt-0.5" />
                     <div>
                       <p className="font-medium text-slate-800 dark:text-white">Godziny otwarcia</p>
-                      <p className="text-slate-600 dark:text-cyber-gray">Poniedziałek - Piątek: 8:00 - 18:00</p>
-                      <p className="text-slate-600 dark:text-cyber-gray">Sobota: 9:00 - 14:00</p>
-                      <p className="text-slate-600 dark:text-cyber-gray">Niedziela: Zamknięte</p>
+                      <p className="text-slate-600 dark:text-cyber-gray">Poniedziałek - Piątek: 9:00 - 18:00</p>
+                      <p className="text-slate-600 dark:text-cyber-gray">Sobota - Niedziela: Zamknięte</p>
                     </div>
                   </div>
                 </div>
