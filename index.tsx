@@ -5,6 +5,41 @@ import { Menu, X, Phone, Mail, MapPin, Clock, ChevronRight, Star } from "lucide-
 import Image from "next/image"
 import { ThemeToggle } from "./theme-toggle"
 
+const galleryImages = [
+  {
+    src: "/placeholder.svg",
+    alt: "Placeholder",
+  },
+  {
+    src: "/placeholder.svg",
+    alt: "Placeholder",
+  },
+  {
+    src: "/placeholder.svg",
+    alt: "Placeholder",
+  },
+  {
+    src: "/placeholder.svg",
+    alt: "Placeholder",
+  },
+  {
+    src: "/placeholder.svg",
+    alt: "Placeholder",
+  },
+  {
+    src: "/placeholder.svg",
+    alt: "Placeholder",
+  },
+  {
+    src: "/placeholder.svg",
+    alt: "Placeholder",
+  },
+  {
+    src: "/placeholder.svg",
+    alt: "Placeholder",
+  },
+]
+
 export default function AutoStylWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
@@ -343,14 +378,14 @@ export default function AutoStylWebsite() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {Array.from({ length: 8 }).map((_, index) => (
+            {galleryImages.map((image, index) => (
               <div
                 key={index}
                 className="relative h-48 md:h-64 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group"
               >
                 <Image
-                  src={`/placeholder.svg?height=400&width=600&text=Zdjęcie+${index + 1}`}
-                  alt={`Przykład pracy ${index + 1}`}
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
                   layout="fill"
                   objectFit="cover"
                   className="rounded-lg hover:scale-105 transition-transform duration-300"
@@ -358,7 +393,7 @@ export default function AutoStylWebsite() {
                 <div className="absolute inset-0 bg-gradient-to-t from-theme-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-4">
                     <div className="w-8 h-1 bg-theme-red mb-2"></div>
-                    <p className="text-theme-cream text-sm">Detailing samochodu premium</p>
+                    <p className="text-theme-cream text-sm">{image.alt}</p>
                   </div>
                 </div>
               </div>
@@ -492,7 +527,7 @@ export default function AutoStylWebsite() {
                     />
                   </svg>
                 </a>
-                <a href="#" className="text-theme-cream hover:text-theme-red transition-colors">
+                <a href="https://www.instagram.com/autostyl_car_wash/" className="text-theme-cream hover:text-theme-red transition-colors">
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fillRule="evenodd"
