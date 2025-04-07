@@ -9,10 +9,10 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-cyber-darkGray transition-colors"
+      className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-theme-black/50 transition-colors"
       aria-label="Przełącz motyw"
     >
-      {theme === "dark" ? <Sun className="h-5 w-5 text-cyber-cyan" /> : <Moon className="h-5 w-5 text-slate-700" />}
+      {theme === "dark" ? <Sun className="h-5 w-5 text-theme-red" /> : <Moon className="h-5 w-5 text-theme-darkRed" />}
     </button>
   )
 }

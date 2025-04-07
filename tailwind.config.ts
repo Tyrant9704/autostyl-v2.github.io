@@ -61,7 +61,13 @@ const config: Config = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Dodajemy nową paletę kolorów
+        // Nowa paleta kolorów
+        theme: {
+          cream: "#EEEBDD",
+          red: "#FF2626",
+          darkRed: "#BD1616",
+          black: "#171717",
+        },
         cyber: {
           black: "#0B0C10",
           darkGray: "#1F2833",

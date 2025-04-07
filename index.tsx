@@ -42,13 +42,13 @@ export default function AutoStylWebsite() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-cyber-black">
+    <div className="min-h-screen bg-theme-cream dark:bg-theme-black">
       {/* Header */}
-      <header className="fixed w-full bg-white dark:bg-cyber-black shadow-md z-50">
+      <header className="fixed w-full bg-theme-cream dark:bg-theme-black shadow-md z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-slate-800 dark:text-white">
-              Auto<span className="text-cyber-teal dark:text-cyber-cyan">Styl</span>
+            <div className="text-2xl font-bold text-theme-black dark:text-theme-cream">
+              Auto<span className="text-theme-red dark:text-theme-red">Styl</span>
             </div>
           </div>
 
@@ -64,10 +64,10 @@ export default function AutoStylWebsite() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-cyber-teal dark:hover:text-cyber-cyan ${
+                className={`text-sm font-medium transition-colors hover:text-theme-darkRed ${
                   activeSection === item.id
-                    ? "text-cyber-teal dark:text-cyber-cyan"
-                    : "text-slate-700 dark:text-cyber-gray"
+                    ? "text-theme-darkRed dark:text-theme-red"
+                    : "text-theme-black dark:text-theme-cream"
                 }`}
               >
                 {item.label}
@@ -80,7 +80,7 @@ export default function AutoStylWebsite() {
             <ThemeToggle />
             <button
               onClick={() => scrollToSection("kontakt")}
-              className="bg-cyber-teal hover:bg-cyber-teal/80 dark:bg-cyber-cyan dark:hover:bg-cyber-cyan/80 dark:text-cyber-black text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+              className="bg-theme-darkRed hover:bg-theme-darkRed/80 dark:bg-theme-red dark:hover:bg-theme-red/80 text-theme-cream px-4 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Zadzwoń teraz
             </button>
@@ -89,7 +89,7 @@ export default function AutoStylWebsite() {
           {/* Mobile Menu Button and Theme Toggle */}
           <div className="md:hidden flex items-center gap-2">
             <ThemeToggle />
-            <button className="text-slate-700 dark:text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button className="text-theme-black dark:text-theme-cream" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -97,7 +97,7 @@ export default function AutoStylWebsite() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-cyber-black border-t dark:border-cyber-darkGray">
+          <div className="md:hidden bg-theme-cream dark:bg-theme-black border-t dark:border-theme-darkRed/30">
             <div className="container mx-auto px-4 py-2">
               <nav className="flex flex-col space-y-3 py-3">
                 {[
@@ -110,10 +110,10 @@ export default function AutoStylWebsite() {
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className={`text-sm font-medium transition-colors hover:text-cyber-teal dark:hover:text-cyber-cyan ${
+                    className={`text-sm font-medium transition-colors hover:text-theme-darkRed ${
                       activeSection === item.id
-                        ? "text-cyber-teal dark:text-cyber-cyan"
-                        : "text-slate-700 dark:text-cyber-gray"
+                        ? "text-theme-darkRed dark:text-theme-red"
+                        : "text-theme-black dark:text-theme-cream"
                     }`}
                   >
                     {item.label}
@@ -121,7 +121,7 @@ export default function AutoStylWebsite() {
                 ))}
                 <button
                   onClick={() => scrollToSection("kontakt")}
-                  className="bg-cyber-teal hover:bg-cyber-teal/80 dark:bg-cyber-cyan dark:hover:bg-cyber-cyan/80 dark:text-cyber-black text-white px-4 py-2 rounded-md text-sm font-medium transition-colors w-full mt-2"
+                  className="bg-theme-darkRed hover:bg-theme-darkRed/80 dark:bg-theme-red dark:hover:bg-theme-red/80 text-theme-cream px-4 py-2 rounded-md text-sm font-medium transition-colors w-full mt-2"
                 >
                   Zadzwoń teraz
                 </button>
@@ -133,8 +133,8 @@ export default function AutoStylWebsite() {
 
       {/* Hero Section */}
       <section id="home" className="pt-20 md:pt-0">
-        <div className="relative h-[80vh] bg-cyber-darkGray">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyber-black/80 to-cyber-black/40 z-10"></div>
+        <div className="relative h-[80vh] bg-theme-black">
+          <div className="absolute inset-0 bg-gradient-to-r from-theme-black/80 to-theme-black/40 z-10"></div>
           <div className="absolute inset-0">
             <Image
               src="/droplets.jpg?height=1080&width=1920"
@@ -146,26 +146,26 @@ export default function AutoStylWebsite() {
             />
           </div>
           <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              Auto<span className="text-cyber-cyan">Styl</span> Będzin
+            <h1 className="text-4xl md:text-6xl font-bold text-theme-cream mb-4">
+              Auto<span className="text-theme-red">Styl</span> Będzin
             </h1>
-            <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl">
+            <p className="text-xl md:text-2xl text-theme-cream mb-8 max-w-2xl">
               Twoje auto zasługuje na najlepszą pielęgnację
             </p>
-            <p className="text-cyber-gray mb-8 max-w-xl">
+            <p className="text-gray-300 mb-8 max-w-xl">
               Zadbaj o swój samochód z profesjonalnym detailingiem. Nasz zespół młodych specjalistów zaoferuje
               kompleksowe usługi czyszczenia, renowacji oraz ochrony pojazdów na najwyższym poziomie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => scrollToSection("uslugi")}
-                className="bg-cyber-cyan hover:bg-cyber-cyan/80 text-cyber-black px-6 py-3 rounded-md text-sm font-medium transition-colors border border-transparent"
+                className="bg-theme-red hover:bg-theme-red/80 text-theme-cream px-6 py-3 rounded-md text-sm font-medium transition-colors border border-transparent"
               >
                 Nasze usługi
               </button>
               <button
                 onClick={() => scrollToSection("kontakt")}
-                className="bg-transparent hover:bg-cyber-darkGray text-cyber-gray border border-cyber-teal hover:border-cyber-cyan px-6 py-3 rounded-md text-sm font-medium transition-colors"
+                className="bg-transparent hover:bg-theme-black text-theme-cream border border-theme-darkRed hover:border-theme-red px-6 py-3 rounded-md text-sm font-medium transition-colors"
               >
                 Umów wizytę
               </button>
@@ -175,67 +175,69 @@ export default function AutoStylWebsite() {
       </section>
 
       {/* About Us Section */}
-      <section id="o-nas" className="py-16 bg-white dark:bg-cyber-black">
+      <section id="o-nas" className="py-16 bg-theme-cream dark:bg-theme-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">O nas</h2>
-            <div className="w-20 h-1 bg-cyber-teal dark:bg-cyber-cyan mx-auto"></div>
+            <h2 className="text-3xl font-bold text-theme-black dark:text-theme-cream mb-2">O nas</h2>
+            <div className="w-20 h-1 bg-theme-darkRed dark:bg-theme-red mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-semibold text-slate-800 dark:text-white mb-4">
+              <h3 className="text-2xl font-semibold text-theme-black dark:text-theme-cream mb-4">
                 15 lat doświadczenia - perfekcja w każdym detalu
               </h3>
-              <p className="text-slate-600 dark:text-cyber-gray mb-4">
-                Autostyl to więcej niż zwykła myjnia. To miejsce, gdzie od ponad 15 lat dbamy o samochody naszych klientów,
-                dostarczając usług na najwyższym poziomie. Niezależnie od tego, czy potrzebujesz szybkiego mycia, odświeżenia lakieru,
-                pełnej korekty czy aplikacji powłoki ceramicznej, zapewniamy jakość, która robi różnicę
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Autostyl to więcej niż zwykła myjnia. To miejsce, gdzie od ponad 15 lat dbamy o samochody naszych
+                klientów, dostarczając usług na najwyższym poziomie. Niezależnie od tego, czy potrzebujesz szybkiego
+                mycia, odświeżenia lakieru, pełnej korekty czy aplikacji powłoki ceramicznej, zapewniamy jakość, która
+                robi różnicę
               </p>
-              <p className="text-slate-600 dark:text-cyber-gray mb-6">
-                W AutoStyl wierzymy, że każdy samochód zasługuje na wyjątkową opiekę. Bez względu na to, czy przyjeżdżasz 
-                formalnym bądź casualowym wydaniu - traktujemy każdy pojazd z najwyższą troską, dostosowując nasze usługi do
-                indywidualnych potrzeb. Dzięki temu możesz mieć pewność, że Twój samochód otrzyma dokładnie to, czego potrzebuje
+              <p className="text-gray-700 dark:text-gray-300 mb-6">
+                W AutoStyl wierzymy, że każdy samochód zasługuje na wyjątkową opiekę. Bez względu na to, czy
+                przyjeżdżasz formalnym bądź casualowym wydaniu - traktujemy każdy pojazd z najwyższą troską,
+                dostosowując nasze usługi do indywidualnych potrzeb. Dzięki temu możesz mieć pewność, że Twój samochód
+                otrzyma dokładnie to, czego potrzebuje
               </p>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-start">
-                  <div className="bg-cyber-teal/10 dark:bg-cyber-cyan/10 p-2 rounded-full mr-3">
-                    <Star className="h-5 w-5 text-cyber-teal dark:text-cyber-cyan" />
+                  <div className="bg-theme-darkRed/10 dark:bg-theme-red/10 p-2 rounded-full mr-3">
+                    <Star className="h-5 w-5 text-theme-darkRed dark:text-theme-red" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-slate-800 dark:text-white">Doświadczenie</h4>
-                    <p className="text-sm text-slate-600 dark:text-cyber-gray">15 lat w branży</p>
+                    <h4 className="font-medium text-theme-black dark:text-theme-cream">Doświadczenie</h4>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">15 lat w branży</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="bg-cyber-teal/10 dark:bg-cyber-cyan/10 p-2 rounded-full mr-3">
-                    <Star className="h-5 w-5 text-cyber-teal dark:text-cyber-cyan" />
+                  <div className="bg-theme-darkRed/10 dark:bg-theme-red/10 p-2 rounded-full mr-3">
+                    <Star className="h-5 w-5 text-theme-darkRed dark:text-theme-red" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-slate-800 dark:text-white">Jakość</h4>
-                    <p className="text-sm text-slate-600 dark:text-cyber-gray">Najlepsze produkty</p>
+                    <h4 className="font-medium text-theme-black dark:text-theme-cream">Jakość</h4>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">Najlepsze produkty</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="bg-cyber-teal/10 dark:bg-cyber-cyan/10 p-2 rounded-full mr-3">
-                    <Star className="h-5 w-5 text-cyber-teal dark:text-cyber-cyan" />
+                  <div className="bg-theme-darkRed/10 dark:bg-theme-red/10 p-2 rounded-full mr-3">
+                    <Star className="h-5 w-5 text-theme-darkRed dark:text-theme-red" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-slate-800 dark:text-white">Profesjonalizm</h4>
-                    <p className="text-sm text-slate-600 dark:text-cyber-gray">Wykwalifikowana kadra</p>
+                    <h4 className="font-medium text-theme-black dark:text-theme-cream">Profesjonalizm</h4>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">Wykwalifikowana kadra</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="bg-cyber-teal/10 dark:bg-cyber-cyan/10 p-2 rounded-full mr-3">
-                    <Star className="h-5 w-5 text-cyber-teal dark:text-cyber-cyan" />
+                  <div className="bg-theme-darkRed/10 dark:bg-theme-red/10 p-2 rounded-full mr-3">
+                    <Star className="h-5 w-5 text-theme-darkRed dark:text-theme-red" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-slate-800 dark:text-white">Zadowolenie</h4>
-                    <p className="text-sm text-slate-600 dark:text-cyber-gray">Setki klientów</p>
+                    <h4 className="font-medium text-theme-black dark:text-theme-cream">Zadowolenie</h4>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">Setki klientów</p>
                   </div>
                 </div>
               </div>
@@ -249,19 +251,19 @@ export default function AutoStylWebsite() {
                 objectFit="cover"
                 className="rounded-lg"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-cyber-black/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-theme-black/50 to-transparent"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="uslugi" className="py-16 bg-slate-50 dark:bg-cyber-darkGray">
+      <section id="uslugi" className="py-16 bg-gray-100 dark:bg-theme-black/90">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">Nasze usługi</h2>
-            <div className="w-20 h-1 bg-cyber-teal dark:bg-cyber-cyan mx-auto mb-4"></div>
-            <p className="text-slate-600 dark:text-cyber-gray max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-theme-black dark:text-theme-cream mb-2">Nasze usługi</h2>
+            <div className="w-20 h-1 bg-theme-darkRed dark:bg-theme-red mx-auto mb-4"></div>
+            <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               Oferujemy kompleksowe usługi detailingowe, które przywrócą blask Twojemu samochodowi i zapewnią mu
               długotrwałą ochronę.
             </p>
@@ -285,7 +287,7 @@ export default function AutoStylWebsite() {
                 title: "Korekta lakieru - drugie życie dla twojego lakieru",
                 description:
                   "Usuwamy zarysowania, hologramy i inne niedoskonałości, które odbierają autu blask. Precyzyjna polerka przywraca gładkość, głębię koloru i fabryczny wygląd lakieru. To nie tylko poprawa estetyki – to inwestycja w wygląd i wartość samochodu.",
-                icon: "/ceramic_coat.svg?height=80&width=80",
+                icon: "/polish.svg?height=80&width=80",
               },
               {
                 title: "Powłoki ceramiczne - ochrona, która trwa",
@@ -303,22 +305,22 @@ export default function AutoStylWebsite() {
                 title: "Pranie tapicerki - odświeżenie, które widać i czuć",
                 description:
                   "Kompleksowe pranie tapicerki materiałowej i skórzanej to gwarancja usunięcia brudu, plam i nieprzyjemnych zapachów. Dzięki profesjonalnym środkom czyszczącym przywracamy tapicerce świeżość, komfort i estetyczny wygląd. To jak nowy początek dla wnętrza Twojego samochodu, w którym spędzasz tak dużo czasu",
-                icon: "/placeholder.svg?height=80&width=80",
+                icon: "/upholstery_extractor.svg?height=80&width=80",
               },
             ].map((service, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-cyber-black rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow border border-transparent hover:border-cyber-teal/20 dark:hover:border-cyber-cyan/20"
+                className="bg-theme-cream dark:bg-theme-black rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow border border-transparent hover:border-theme-darkRed/20 dark:hover:border-theme-red/20"
               >
                 <div className="p-6">
-                  <div className="w-16 h-16 bg-cyber-teal/10 dark:bg-cyber-cyan/10 rounded-full flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 bg-theme-darkRed/10 dark:bg-theme-red/10 rounded-full flex items-center justify-center mb-4">
                     <Image src={service.icon || "/placeholder.svg"} alt={service.title} width={40} height={40} />
                   </div>
-                  <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-2">{service.title}</h3>
-                  <p className="text-slate-600 dark:text-cyber-gray mb-4">{service.description}</p>
+                  <h3 className="text-xl font-semibold text-theme-black dark:text-theme-cream mb-2">{service.title}</h3>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">{service.description}</p>
                   <button
                     onClick={() => scrollToSection("kontakt")}
-                    className="text-cyber-teal dark:text-cyber-cyan hover:text-cyber-teal/80 dark:hover:text-cyber-cyan/80 font-medium flex items-center text-sm"
+                    className="text-theme-darkRed dark:text-theme-red hover:text-theme-darkRed/80 dark:hover:text-theme-red/80 font-medium flex items-center text-sm"
                   >
                     Dowiedz się więcej <ChevronRight className="h-4 w-4 ml-1" />
                   </button>
@@ -330,12 +332,12 @@ export default function AutoStylWebsite() {
       </section>
 
       {/* Gallery Section */}
-      <section id="galeria" className="py-16 bg-white dark:bg-cyber-black">
+      <section id="galeria" className="py-16 bg-theme-cream dark:bg-theme-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">Galeria</h2>
-            <div className="w-20 h-1 bg-cyber-teal dark:bg-cyber-cyan mx-auto mb-4"></div>
-            <p className="text-slate-600 dark:text-cyber-gray max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-theme-black dark:text-theme-cream mb-2">Galeria</h2>
+            <div className="w-20 h-1 bg-theme-darkRed dark:bg-theme-red mx-auto mb-4"></div>
+            <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               Zobacz efekty naszej pracy i przekonaj się o jakości naszych usług.
             </p>
           </div>
@@ -353,10 +355,10 @@ export default function AutoStylWebsite() {
                   objectFit="cover"
                   className="rounded-lg hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-cyber-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-theme-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-4">
-                    <div className="w-8 h-1 bg-cyber-cyan mb-2"></div>
-                    <p className="text-white text-sm">Detailing samochodu premium</p>
+                    <div className="w-8 h-1 bg-theme-red mb-2"></div>
+                    <p className="text-theme-cream text-sm">Detailing samochodu premium</p>
                   </div>
                 </div>
               </div>
@@ -366,12 +368,12 @@ export default function AutoStylWebsite() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-slate-50 dark:bg-cyber-darkGray">
+      <section className="py-16 bg-gray-100 dark:bg-theme-black/90">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">Opinie klientów</h2>
-            <div className="w-20 h-1 bg-cyber-teal dark:bg-cyber-cyan mx-auto mb-4"></div>
-            <p className="text-slate-600 dark:text-cyber-gray max-w-2xl mx-auto">Co mówią o nas nasi klienci?</p>
+            <h2 className="text-3xl font-bold text-theme-black dark:text-theme-cream mb-2">Opinie klientów</h2>
+            <div className="w-20 h-1 bg-theme-darkRed dark:bg-theme-red mx-auto mb-4"></div>
+            <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Co mówią o nas nasi klienci?</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -394,18 +396,18 @@ export default function AutoStylWebsite() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-cyber-black rounded-lg shadow-md p-6 border border-transparent hover:border-cyber-teal/20 dark:hover:border-cyber-cyan/20"
+                className="bg-theme-cream dark:bg-theme-black rounded-lg shadow-md p-6 border border-transparent hover:border-theme-darkRed/20 dark:hover:border-theme-red/20"
               >
                 <div className="flex items-center mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className={`h-5 w-5 ${i < testimonial.rating ? "text-cyber-teal fill-cyber-teal dark:text-cyber-cyan dark:fill-cyber-cyan" : "text-gray-300 dark:text-gray-600"}`}
+                      className={`h-5 w-5 ${i < testimonial.rating ? "text-theme-darkRed fill-theme-darkRed dark:text-theme-red dark:fill-theme-red" : "text-gray-300 dark:text-gray-600"}`}
                     />
                   ))}
                 </div>
-                <p className="text-slate-600 dark:text-cyber-gray mb-4 italic">"{testimonial.text}"</p>
-                <p className="font-medium text-slate-800 dark:text-white">{testimonial.name}</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4 italic">"{testimonial.text}"</p>
+                <p className="font-medium text-theme-black dark:text-theme-cream">{testimonial.name}</p>
               </div>
             ))}
           </div>
@@ -413,149 +415,75 @@ export default function AutoStylWebsite() {
       </section>
 
       {/* Contact Section */}
-      <section id="kontakt" className="py-16 bg-white dark:bg-cyber-black">
+      <section id="kontakt" className="py-16 bg-theme-cream dark:bg-theme-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">Kontakt</h2>
-            <div className="w-20 h-1 bg-cyber-teal dark:bg-cyber-cyan mx-auto mb-4"></div>
-            <p className="text-slate-600 dark:text-cyber-gray max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-theme-black dark:text-theme-cream mb-2">Kontakt</h2>
+            <div className="w-20 h-1 bg-theme-darkRed dark:bg-theme-red mx-auto mb-4"></div>
+            <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               Skontaktuj się z nami, aby umówić wizytę lub uzyskać więcej informacji o naszych usługach.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <div className="bg-white dark:bg-cyber-black rounded-lg shadow-md p-6 dark:border dark:border-cyber-darkGray">
-                <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-6">Informacje kontaktowe</h3>
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-theme-cream dark:bg-theme-black rounded-lg shadow-md p-8 dark:border dark:border-theme-darkRed/30">
+              <h3 className="text-xl font-semibold text-theme-black dark:text-theme-cream mb-6">
+                Informacje kontaktowe
+              </h3>
 
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <Phone className="h-5 w-5 text-cyber-teal dark:text-cyber-cyan mr-3 mt-0.5" />
-                    <div>
-                      <p className="font-medium text-slate-800 dark:text-white">Telefon</p>
-                      <p className="text-slate-600 dark:text-cyber-gray">+48 123 456 789</p>
-                    </div>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <Phone className="h-6 w-6 text-theme-darkRed dark:text-theme-red mr-4 mt-0.5" />
+                  <div>
+                    <p className="font-medium text-theme-black dark:text-theme-cream text-lg">Telefon</p>
+                    <p className="text-gray-700 dark:text-gray-300 text-lg">+48 123 456 789</p>
                   </div>
+                </div>
 
-                  <div className="flex items-start">
-                    <Mail className="h-5 w-5 text-cyber-teal dark:text-cyber-cyan mr-3 mt-0.5" />
-                    <div>
-                      <p className="font-medium text-slate-800 dark:text-white">Email</p>
-                      <p className="text-slate-600 dark:text-cyber-gray">kontakt@autostyl.pl</p>
-                    </div>
+                <div className="flex items-start">
+                  <Mail className="h-6 w-6 text-theme-darkRed dark:text-theme-red mr-4 mt-0.5" />
+                  <div>
+                    <p className="font-medium text-theme-black dark:text-theme-cream text-lg">Email</p>
+                    <p className="text-gray-700 dark:text-gray-300 text-lg">kontakt@autostyl.pl</p>
                   </div>
+                </div>
 
-                  <div className="flex items-start">
-                    <MapPin className="h-5 w-5 text-cyber-teal dark:text-cyber-cyan mr-3 mt-0.5" />
-                    <div>
-                      <p className="font-medium text-slate-800 dark:text-white">Adres</p>
-                      <p className="text-slate-600 dark:text-cyber-gray">ul. Piastowska 33, 42-500 Będzin</p>
-                    </div>
+                <div className="flex items-start">
+                  <MapPin className="h-6 w-6 text-theme-darkRed dark:text-theme-red mr-4 mt-0.5" />
+                  <div>
+                    <p className="font-medium text-theme-black dark:text-theme-cream text-lg">Adres</p>
+                    <p className="text-gray-700 dark:text-gray-300 text-lg">ul. Piastowska 33, 42-500 Będzin</p>
                   </div>
+                </div>
 
-                  <div className="flex items-start">
-                    <Clock className="h-5 w-5 text-cyber-teal dark:text-cyber-cyan mr-3 mt-0.5" />
-                    <div>
-                      <p className="font-medium text-slate-800 dark:text-white">Godziny otwarcia</p>
-                      <p className="text-slate-600 dark:text-cyber-gray">Poniedziałek - Piątek: 9:00 - 18:00</p>
-                      <p className="text-slate-600 dark:text-cyber-gray">Sobota - Niedziela: Zamknięte</p>
-                    </div>
+                <div className="flex items-start">
+                  <Clock className="h-6 w-6 text-theme-darkRed dark:text-theme-red mr-4 mt-0.5" />
+                  <div>
+                    <p className="font-medium text-theme-black dark:text-theme-cream text-lg">Godziny otwarcia</p>
+                    <p className="text-gray-700 dark:text-gray-300 text-lg">Poniedziałek - Piątek: 9:00 - 18:00</p>
+                    <p className="text-gray-700 dark:text-gray-300 text-lg">Sobota - Niedziela: Zamknięte</p>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div>
-              <div className="bg-white dark:bg-cyber-black rounded-lg shadow-md p-6 dark:border dark:border-cyber-darkGray">
-                <h3 className="text-xl font-semibold text-slate-800 dark:text-white mb-6">Wyślij wiadomość</h3>
-
-                <form className="space-y-4">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-slate-700 dark:text-cyber-gray mb-1"
-                    >
-                      Imię i nazwisko
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-cyber-darkGray rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-teal dark:focus:ring-cyber-cyan focus:border-transparent bg-white dark:bg-cyber-darkGray text-slate-900 dark:text-white"
-                      placeholder="Jan Kowalski"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-slate-700 dark:text-cyber-gray mb-1"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-cyber-darkGray rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-teal dark:focus:ring-cyber-cyan focus:border-transparent bg-white dark:bg-cyber-darkGray text-slate-900 dark:text-white"
-                      placeholder="jan@example.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-slate-700 dark:text-cyber-gray mb-1"
-                    >
-                      Telefon
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-cyber-darkGray rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-teal dark:focus:ring-cyber-cyan focus:border-transparent bg-white dark:bg-cyber-darkGray text-slate-900 dark:text-white"
-                      placeholder="+48 123 456 789"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-slate-700 dark:text-cyber-gray mb-1"
-                    >
-                      Wiadomość
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={4}
-                      className="w-full px-3 py-2 border border-gray-300 dark:border-cyber-darkGray rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-teal dark:focus:ring-cyber-cyan focus:border-transparent bg-white dark:bg-cyber-darkGray text-slate-900 dark:text-white"
-                      placeholder="Twoja wiadomość..."
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-cyber-teal hover:bg-cyber-teal/80 dark:bg-cyber-cyan dark:hover:bg-cyber-cyan/80 dark:text-cyber-black text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
-                  >
-                    Wyślij wiadomość
-                  </button>
-                </form>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-cyber-darkGray dark:bg-cyber-black text-white py-12 border-t border-cyber-teal/20 dark:border-cyber-cyan/20">
+      <footer className="bg-theme-black text-theme-cream py-12 border-t border-theme-darkRed/20 dark:border-theme-red/20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">
-                Auto<span className="text-cyber-teal dark:text-cyber-cyan">Styl</span>
+                Auto<span className="text-theme-red">Styl</span>
               </div>
-              <p className="text-cyber-gray mb-4">
+              <p className="text-gray-300 mb-4">
                 Profesjonalny detailing samochodowy w Będzinie. Zadbamy o Twój samochód jak o własny.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-white hover:text-cyber-cyan transition-colors">
+                <a href="#" className="text-theme-cream hover:text-theme-red transition-colors">
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fillRule="evenodd"
@@ -564,7 +492,7 @@ export default function AutoStylWebsite() {
                     />
                   </svg>
                 </a>
-                <a href="#" className="text-white hover:text-cyber-cyan transition-colors">
+                <a href="#" className="text-theme-cream hover:text-theme-red transition-colors">
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fillRule="evenodd"
@@ -581,59 +509,39 @@ export default function AutoStylWebsite() {
               <nav className="grid gap-2">
                 <button
                   onClick={() => scrollToSection("home")}
-                  className="text-cyber-gray hover:text-cyber-cyan transition-colors text-left"
+                  className="text-gray-300 hover:text-theme-red transition-colors text-left"
                 >
                   Strona główna
                 </button>
                 <button
                   onClick={() => scrollToSection("o-nas")}
-                  className="text-cyber-gray hover:text-cyber-cyan transition-colors text-left"
+                  className="text-gray-300 hover:text-theme-red transition-colors text-left"
                 >
                   O nas
                 </button>
                 <button
                   onClick={() => scrollToSection("uslugi")}
-                  className="text-cyber-gray hover:text-cyber-cyan transition-colors text-left"
+                  className="text-gray-300 hover:text-theme-red transition-colors text-left"
                 >
                   Usługi
                 </button>
                 <button
                   onClick={() => scrollToSection("galeria")}
-                  className="text-cyber-gray hover:text-cyber-cyan transition-colors text-left"
+                  className="text-gray-300 hover:text-theme-red transition-colors text-left"
                 >
                   Galeria
                 </button>
                 <button
                   onClick={() => scrollToSection("kontakt")}
-                  className="text-cyber-gray hover:text-cyber-cyan transition-colors text-left"
+                  className="text-gray-300 hover:text-theme-red transition-colors text-left"
                 >
                   Kontakt
                 </button>
               </nav>
             </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-              <p className="text-cyber-gray mb-4">
-                Zapisz się do naszego newslettera, aby otrzymywać informacje o promocjach i nowościach.
-              </p>
-              <form className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Twój email"
-                  className="flex-1 px-3 py-2 border border-cyber-darkGray rounded-md focus:outline-none focus:ring-2 focus:ring-cyber-cyan focus:border-transparent bg-cyber-black text-white"
-                />
-                <button
-                  type="submit"
-                  className="bg-cyber-cyan hover:bg-cyber-cyan/80 text-cyber-black px-4 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  Zapisz
-                </button>
-              </form>
-            </div>
           </div>
 
-          <div className="border-t border-cyber-darkGray mt-8 pt-8 text-center text-cyber-gray text-sm">
+          <div className="border-t border-theme-darkRed/30 mt-8 pt-8 text-center text-gray-300 text-sm">
             <p>&copy; {new Date().getFullYear()} AutoStyl Będzin. Wszelkie prawa zastrzeżone.</p>
           </div>
         </div>
